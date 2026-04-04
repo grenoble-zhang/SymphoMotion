@@ -16,9 +16,9 @@ Authors: [Guiyu Zhang](https://grenoble-zhang.github.io/)<sup>*1</sup>, [Yabo Ch
 ## TODO
 
 - [x] Release project page
-- [ ] Release arXiv paper (coming soon)
-- [ ] Release full codes (coming soon)
-- [ ] Release data (coming soon)
+- [ ] Release arXiv paper
+- [ ] Release full codes
+- [ ] Release data
 
 ## BibTeX
 
