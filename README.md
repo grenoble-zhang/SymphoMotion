@@ -13,13 +13,6 @@ Authors: [Guiyu Zhang](https://grenoble-zhang.github.io/)<sup>*1</sup>, [Yabo Ch
 <sup>1</sup> The Chinese University of Hong Kong, Shenzhen&emsp;<sup>2</sup> Shanghai Jiao Tong University&emsp;<sup>3</sup> Nanjing University&emsp;<sup>4</sup> Beihang University
 <img src="img/method.png" width="100%"/>
 
-## TODO
-
-- [x] Release project page
-- [ ] Release arXiv paper (coming soon)
-- [ ] Release full codes (coming soon)
-- [ ] Release data (coming soon)
-
 ## BibTeX
 
 If you find our work useful in your research, please consider citing our paper:
