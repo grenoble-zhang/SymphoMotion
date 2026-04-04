@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+          content=".">
+    <meta name="keywords"
+          content="SymphoMotion">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SymphoMotion</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="./static/css/twentytwenty.css">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./img/logo.png">
+
+
+    <script src="./static/js/jquery-3.2.1.min.js"></script>
+    <script src="./static/js/jquery.event.move.js"></script>
+    <script src="./static/js/jquery.twentytwenty.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/fontawesome.all.min.js"></script>
+</head>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LKCDBW8851"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-LKCDBW8851');
+</script>
+
+
+<body style="background-color: #09090f;">
+
+
+
+<section class="hero teaser ">
+    <div class="hero-body">
+        <div class="container is-max-desktop has-text-centered">
+            <div class="columns is-centered">
+                <div class="column has-text-centered ">
+                    <img src="img/logo.png" class="logo-dark" style="height:170px; margin-bottom: -10px;">
+                    <h1 class="title is-1 publication-title gradient-text has-text-centered" style="font-size: 2.5rem; line-height: 1.3;">
+                        Joint Control of Camera Motion and Object Dynamics for Coherent Video Generation
+                    </h1>
+                    <div style="margin-top: 10px; margin-bottom: 15px;">
+                        <span class="venue-badge">CVPR 2026</span>
+                    </div>
+                    <div class="publication-authors" style="font-size: 1.45rem;">
+                        <span class="author-block">
+                          <a href="https://grenoble-zhang.github.io/">Guiyu Zhang</a><sup>*1</sup>,
+                        </span>
+                        <span class="author-block">
+                          <a href="https://scholar.google.com/citations?user=6aHx1rgAAAAJ&hl=zh-TW">Yabo Chen</a><sup>*2</sup>,
+                        </span>
+                        <span class="author-block">
+                          <a href="https://xbxsxp9.github.io/">Xunzhi Xiang</a><sup>3</sup>,
+                        </span>
+                        <span class="author-block">
+                          <a href="https://junchao-cs.github.io/">Junchao Huang</a><sup>1</sup>,
+                        </span>
+                        <span class="author-block">
+                          <a href="https://scholar.google.com.hk/citations?user=BYTfdcUAAAAJ&hl=zh-CN&oi=sra">Zhongyu Wang</a><sup>4</sup>,
+                        </span>
+                        <span class="author-block">
+                          <a href="https://llijiang.github.io/">Li Jiang</a><sup>&dagger;1</sup>
+                        </span>
+                    </div>
+
+                    <div class="publication-authors" style="font-size: 1.25rem; margin-top: 8px;">
+                        <span class="author-block"><sup>1</sup>The Chinese University of Hong Kong, Shenzhen, <sup>2</sup>Shanghai Jiaotong University,</span>
+                        <br>
+                        <span class="author-block"><sup>3</sup>Nanjing University, <sup>4</sup>Beihang University</span>
+                    </div>
+                    <div class="publication-authors" style="font-size: 1rem; margin-top: 6px;">
+                        <span class="author-block"><sup>*</sup>Equal contribution, <sup>&dagger;</sup>Corresponding author</span>
+                    </div>
+
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                          <span class="link-block">
+                            <a href=""
+                               class="external-link button is-normal is-rounded is-dark">
+                              <span class="icon">
+                                  <i class="ai ai-arxiv"></i>
+                              </span>
+                              <span>arXiv</span>
+                            </a>
+                          </span>
+                          <span class="link-block">
+                            <a href="https://github.com/grenoble-zhang/SymphoMotion"
+                               class="external-link button is-normal is-rounded is-dark">
+                              <span class="icon">
+                                  <i class="fab fa-github"></i>
+                              </span>
+                              <span>Code</span>
+                              </a>
+                          </span>
+                          <span class="link-block">
+                            <a href=""
+                               class="external-link button is-normal is-rounded is-dark">
+                              <span class="icon">
+                                  &#129303;
+                              </span>
+                              <span>Data</span>
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="hero teaser is-light is-small">
+    <div class="hero-body">
+        <div class="container" style="text-align: left;">
+            <div id="results-carousel-horizontal" class="carousel results-carousel">
+
+                <div class="carousel-item">
+                    <div class="video-grid-3x4">
+                        <!-- Row 1 -->
+                        <video muted autoplay loop playsinline><source src="./video/v1/1-1.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v1/1-2.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v1/2-1.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v1/2-2.mp4" type="video/mp4"></video>
+                        <!-- Row 2 -->
+                        <video muted autoplay loop playsinline><source src="./video/v1/3-1.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v1/3-2.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v1/4-1.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v1/4-2.mp4" type="video/mp4"></video>
+                        <!-- Row 3 -->
+                        <video muted autoplay loop playsinline><source src="./video/v1/5-1.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v1/5-2.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v1/6-1.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v1/6-2.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="video-caption">Unified camera and object motion control</div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="video-grid-3x4">
+                        <!-- Row 1 -->
+                        <video muted autoplay loop playsinline><source src="./video/v2/1-1.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v2/1-2.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v2/2-1.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v2/2-2.mp4" type="video/mp4"></video>
+                        <!-- Row 2 -->
+                        <video muted autoplay loop playsinline><source src="./video/v2/3-1.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v2/3-2.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v2/4-1.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v2/4-2.mp4" type="video/mp4"></video>
+                        <!-- Row 3 -->
+                        <video muted autoplay loop playsinline><source src="./video/v2/5-1.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v2/5-2.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v2/6-1.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v2/6-2.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="video-caption">Unified camera and object motion control</div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="video-grid-3x4">
+                        <!-- Row 1 -->
+                        <img src="./video/camera_control/1.png">
+                        <video muted autoplay loop playsinline><source src="./video/camera_control/1.mp4" type="video/mp4"></video>
+                        <img src="./video/camera_control/2.png">
+                        <video muted autoplay loop playsinline><source src="./video/camera_control/2.mp4" type="video/mp4"></video>
+                        <!-- Row 2 -->
+                        <img src="./video/camera_control/3.png">
+                        <video muted autoplay loop playsinline><source src="./video/camera_control/3.mp4" type="video/mp4"></video>
+                        <img src="./video/camera_control/4.png">
+                        <video muted autoplay loop playsinline><source src="./video/camera_control/4.mp4" type="video/mp4"></video>
+                        <!-- Row 3 -->
+                        <img src="./video/camera_control/5.png">
+                        <video muted autoplay loop playsinline><source src="./video/camera_control/5.mp4" type="video/mp4"></video>
+                        <img src="./video/camera_control/6.png">
+                        <video muted autoplay loop playsinline><source src="./video/camera_control/6.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="video-caption">Camera control</div>
+                </div>
+            </div>
+
+            <div class="content has-text-centered" style="margin-top: 20px; font-size: 1.3rem;">
+                <b>Joint Control of Camera and Object Motion.</b> Given a reference image, a set of 3D object trajectories, and a camera trajectory, SymphoMotion generates videos that are spatially consistent and faithfully reflect both object and camera motion.
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.carousel-item {
+    position: relative;
+    width: 100%;
+}
+
+.video-grid-3x4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 4px;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.video-grid-3x4 video {
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+}
+
+.video-grid-3x4 img {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    display: block;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.video-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    white-space: nowrap;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(6, 182, 212, 0.25);
+    border-top: 2px solid #06b6d4;
+}
+
+.carousel {
+    padding-bottom: 1px;
+}
+</style>
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#results-carousel-horizontal', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            autoplay: false,
+        });
+
+        bulmaCarousel.attach('#results-carousel-vertical', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            autoplay: false,
+        });
+
+    });
+</script>
+
+
+<br><br><br>
+
+<section class="hero teaser">
+    <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-three-fifths" style=" margin-top: 30px; margin-bottom: 20px;">
+                    <h2 class="title is-3 section-heading">Abstract</h2>
+                    <div class="content has-text-justified" style="font-size: 1.25rem;">
+                        Controlling both camera motion and object dynamics is essential for coherent and expressive video generation, yet current methods typically handle only one motion type or rely on ambiguous 2D cues that entangle camera-induced parallax with true object movement. We present SymphoMotion, a unified motion-control framework that jointly governs camera trajectories and object dynamics within a single model. SymphoMotion features a Camera Trajectory Control mechanism that integrates explicit camera paths with geometry-aware cues to ensure stable, structurally consistent viewpoint transitions, and an Object Dynamics Control mechanism that combines 2D visual guidance with 3D trajectory embeddings to enable depth-aware, spatially coherent object manipulation. To support large-scale training and evaluation, we further construct RealCOD-25K, a comprehensive real-world dataset containing paired camera poses and object-level 3D trajectories across diverse indoor and outdoor scenes, addressing a key data gap in unified motion control. Extensive experiments and user studies show that SymphoMotion significantly outperforms existing methods in visual fidelity, camera controllability, and object-motion accuracy, establishing a new benchmark for unified motion control in video generation.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="hero teaser">
+    <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-three-fifths" style=" margin-top: 30px; margin-bottom: 20px;">
+                    <h2 class="title is-3 section-heading">Method</h2>
+                    <div class="content has-text-justified" style="font-size: 1.18rem;">
+                        <div class="hero-body" style="margin-top: 10px; margin-bottom: -10px;">
+                            <img id="overview" width="70%" src="./img/method.png"/>
+                        </div>
+                        <p style="margin-top: 15px;">
+                            <b>Overview of SymphoMotion.</b> SymphoMotion introduces two complementary mechanisms for camera and object motion control: <b>Camera Trajectory Control (CTC)</b> and <b>Object Dynamics Control (ODC)</b>.
+                            Given a reference image, a text prompt, and the specified camera and object trajectories, CTC employs the <b>Viewpoint Control Module (VCM)</b> to integrate 3D geometric priors with camera motion for precise trajectory control. In parallel, ODC, powered by the <b>Object Motion Module (OMM)</b>, combines 2D visual guidance with 3D motion cues for dynamic and spatially coherent object manipulation.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#camera-control', {
+            slidesToScroll: 1,
+            slidesToShow: 2,
+            loop: true,
+            autoplay: false,
+        });
+    });
+</script>
+
+<section class="hero teaser is-light is-small">
+    <div class="hero-body">
+
+        <div class="container" style="text-align: center; ">
+            <h2 class="title is-3 section-heading">More unified (camera and object) control results</h2>
+            <div id="union-control" class="carousel results-carousel">
+
+                <div class="carousel-item">
+                    <div class="video-grid-3x4">
+                        <!-- Row 1 -->
+                        <video muted autoplay loop playsinline><source src="./video/v3/1-1.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v3/1-2.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v3/2-1.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v3/2-2.mp4" type="video/mp4"></video>
+                        <!-- Row 2 -->
+                        <video muted autoplay loop playsinline><source src="./video/v3/3-1.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v3/3-2.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v3/4-1.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v3/4-2.mp4" type="video/mp4"></video>
+                        <!-- Row 3 -->
+                        <video muted autoplay loop playsinline><source src="./video/v3/5-1.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v3/5-2.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v3/6-1.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v3/6-2.mp4" type="video/mp4"></video>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="video-grid-3x4">
+                        <!-- Row 1 -->
+                        <video muted autoplay loop playsinline><source src="./video/v4/1-1.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v4/1-2.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v4/2-1.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v4/2-2.mp4" type="video/mp4"></video>
+                        <!-- Row 2 -->
+                        <video muted autoplay loop playsinline><source src="./video/v4/3-1.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v4/3-2.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v4/4-1.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v4/4-2.mp4" type="video/mp4"></video>
+                        <!-- Row 3 -->
+                        <video muted autoplay loop playsinline><source src="./video/v4/5-1.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v4/5-2.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v4/6-1.mp4" type="video/mp4"></video>
+                        <video muted autoplay loop playsinline><source src="./video/v4/6-2.mp4" type="video/mp4"></video>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#union-control', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            autoplay: false,
+        });
+    });
+</script>
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#cmp-point-carousel-horizontal', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            autoplay: false,
+        });
+
+    });
+</script>
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#comparison-base', {
+            slidesToScroll: 2,
+            slidesToShow: 2,
+            loop: true,
+            autoplay: false,
+        });
+
+        $(".twentytwenty-container-bottom").twentytwenty({
+            before_label: 'Base',
+            after_label: 'Ours',
+            default_offset_pct: 0.5,
+            no_overlay: false,
+            // move_slider_on_hover: true,
+        });
+
+    });
+</script>
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#ablation-study', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            autoplay: false,
+        });
+
+    });
+</script>
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#comparison-base', {
+            slidesToScroll: 2,
+            slidesToShow: 2,
+            loop: true,
+            autoplay: false,
+        });
+
+        $(".twentytwenty-container-bottom").twentytwenty({
+            before_label: 'Base',
+            after_label: 'Ours',
+            default_offset_pct: 0.5,
+            no_overlay: false,
+            // move_slider_on_hover: true,
+        });
+
+    });
+</script>
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#grammy', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            autoplay: false,
+        });
+
+    });
+</script>
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#comparison-base', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            autoplay: false,
+        });
+
+        $(".grammy").twentytwenty({
+            before_label: 'Base',
+            after_label: 'Ours',
+            default_offset_pct: 0.5,
+            no_overlay: false,
+            // move_slider_on_hover: true,
+        });
+
+    });
+</script>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @article{zhang2025symphomotion,
+        title={SymphoMotion: Joint Control of Camera Motion and Object Dynamics for Coherent Video Generation},
+        author={Zhang, Guiyu and Chen, Yabo and Xiang, Xunzhi and Huang, Junchao and Wang, Zhongyu and Jiang, Li},
+        journal={arXiv preprint},
+        year={2025}
+      }
+    </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+    <div class="hero-body">
+        <div class="columns is-two-fifths is-centered">
+            <div class="column is-8">
+                <div class="content has-text-centered">
+                    <p>
+                        Website template credit to <a
+                            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, and is licensed under a <a
+                            rel="license"
+                            href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                        Commons Attribution-ShareAlike 4.0 International License</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

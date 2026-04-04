@@ -1,0 +1,364 @@
+/* ========== Dark Theme (CineScene-style) ========== */
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #09090f !important;
+  color: #ddd;
+}
+
+html {
+  background-color: #09090f !important;
+}
+
+/* Override Bulma default backgrounds */
+.hero,
+.hero.is-small,
+.section {
+  background-color: #09090f !important;
+  color: #ddd;
+}
+
+/* Alternating section backgrounds for depth */
+.hero.is-light {
+  background-color: #0d0d18 !important;
+  color: #ddd;
+}
+
+.navbar {
+  background-color: #09090f !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar-item,
+.navbar-link {
+  color: #ddd !important;
+}
+
+.navbar-link:hover,
+.navbar-item:hover {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: #fff !important;
+}
+
+.navbar-dropdown {
+  background-color: #0f0f1a !important;
+  border-top: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-dropdown .navbar-item {
+  color: #ccc !important;
+}
+
+.navbar-dropdown .navbar-item:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #fff !important;
+}
+
+/* Titles and headings */
+.title,
+.subtitle,
+h1, h2, h3, h4, h5, h6 {
+  color: #fff !important;
+}
+
+/* Content text */
+.content,
+.content p,
+.content li,
+.has-text-justified,
+p, span, div {
+  color: #ddd;
+}
+
+strong, b {
+  color: #fff;
+}
+
+/* ========== Links ========== */
+a {
+  color: #22d3ee;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #67e8f9;
+}
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #ddd;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* ========== CVPR Badge ========== */
+.venue-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+  padding: 6px 24px;
+  border-radius: 20px;
+  font-size: 1.2rem !important;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff;
+}
+
+/* Buttons */
+.button.is-dark {
+  background-color: #141420 !important;
+  border: 1px solid rgba(6, 182, 212, 0.3) !important;
+  color: #fff !important;
+  transition: all 0.3s ease;
+}
+
+.button.is-dark:hover {
+  background-color: #1a1a2e !important;
+  border-color: rgba(139, 92, 246, 0.5) !important;
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.15), 0 0 30px rgba(139, 92, 246, 0.1);
+}
+
+/* ========== Publication Styles ========== */
+.methodname {
+  font-variant: small-caps;
+}
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+/* ========== Hero Glow Effect ========== */
+.hero.teaser:first-of-type {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero.teaser:first-of-type::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 600px;
+  background: radial-gradient(ellipse at center,
+    rgba(6, 182, 212, 0.08) 0%,
+    rgba(139, 92, 246, 0.05) 40%,
+    transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero.teaser:first-of-type .hero-body {
+  position: relative;
+  z-index: 1;
+}
+
+.publication-title {
+    width: 110%;
+    margin-left: -5%;
+    font-family: 'Google Sans', sans-serif;
+    color: #fff !important;
+}
+
+.publication-title.gradient-text {
+    background: linear-gradient(135deg, #06b6d4 0%, #a78bfa 50%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent !important;
+}
+
+.publication-banner {
+  max-height: parent;
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+    color: #ccc;
+}
+
+.publication-authors a {
+   color: #22d3ee !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+    color: #67e8f9 !important;
+}
+
+.publication-venue {
+    color: #999;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ========== Carousel ========== */
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .twoitem {
+    background-color: #09090f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 95%;
+    margin: 5px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 0;
+    font-size: 0;
+    box-sizing: border-box;
+}
+
+.slider-navigation-previous {
+    top: 47.5%;
+    margin-top: -15px;
+    left: calc(0% + 15px);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 1);
+}
+
+.slider-navigation-next {
+    top: 47.5%;
+    margin-top: -15px;
+    left: calc(100% - 15px - 42px);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 1);
+}
+
+.slider-pagination {
+    top: calc(100% - 22px);
+}
+
+.slider-pagination .slider-page {
+    background-color: #FFF;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 1);
+}
+
+/* ========== Section Headings ========== */
+.section-heading {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.section-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #06b6d4, #8b5cf6);
+  border-radius: 2px;
+}
+
+/* ========== BibTeX ========== */
+#BibTeX {
+  background-color: #09090f !important;
+}
+
+#BibTeX pre {
+  background-color: #0d0d18 !important;
+  color: #ddd;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 3px solid #06b6d4;
+  border-radius: 8px;
+}
+
+#BibTeX code {
+  color: #ddd;
+  background-color: transparent;
+}
+
+/* ========== Footer ========== */
+.footer {
+  background-color: #09090f !important;
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(90deg, transparent, #06b6d4, #8b5cf6, transparent) 1;
+}
+
+.footer .content p {
+  color: #999;
+}
+
+.footer a {
+  color: #22d3ee;
+}
+
+/* ========== Misc ========== */
+.selectable {
+    -webkit-touch-callout: all;
+    -webkit-user-select: all;
+    -khtml-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
+    user-select: all;
+}
+
+/* Override Bulma box/card backgrounds */
+.box,
+.card {
+  background-color: #0f0f1a !important;
+  color: #ddd;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ========== Logo Dark Mode ========== */
+.logo-dark {
+  filter: invert(1) hue-rotate(180deg) brightness(1.1);
+}
+
+/* Image containers on dark background */
+.hero-body img {
+  border-radius: 8px;
+}
