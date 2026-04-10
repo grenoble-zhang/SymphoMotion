@@ -24,11 +24,11 @@ Authors: [Guiyu Zhang](https://grenoble-zhang.github.io/)<sup>*1</sup>, [Yabo Ch
 
 If you find our work useful in your research, please consider citing our paper:
 ```bibtex
-@article{zhang2025symphomotion,
+@article{zhang2026symphomotion,
   title={SymphoMotion: Joint Control of Camera Motion and Object Dynamics for Coherent Video Generation},
   author={Zhang, Guiyu and Chen, Yabo and Xiang, Xunzhi and Huang, Junchao and Wang, Zhongyu and Jiang, Li},
-  journal={arXiv preprint},
-  year={2025}
+  journal={arXiv preprint arXiv:2604.03723},
+  year={2026}
 }
 ```
 
