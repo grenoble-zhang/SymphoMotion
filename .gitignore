@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# PyTorch checkpoints (download separately)
+pretrained_checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+
+# Pretrained models (download separately)
+pretrained_models/
+*.tar.gz
+*.zip
+
+# Datasets (download separately)
+data/
+!data/.gitkeep
+
+# Training outputs
+outputs/
+checkpoints/
+logs/
+wandb/
+runs/
+validation_videos/
+
+# IDE
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.cache/
+.pytest_cache/
+
+# Keep asset structure but ignore large files
+assets/demo_samples/
+assets/demo_results/
+!assets/README.md
+!assets/.gitkeep

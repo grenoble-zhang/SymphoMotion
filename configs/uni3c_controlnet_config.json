@@ -1,0 +1,16 @@
+{
+  "nframe": 81,
+  "camera_embedding": true,
+  "grad_checkpoint": true,
+  "controlnet_cfg": {
+    "conv_out_dim": 5120,
+    "time_embed_dim": 5120,
+    "dim": 1024,
+    "ffn_dim": 4096,
+    "num_heads": 16,
+    "num_layers": 20,
+    "add_channels": 7,
+    "mid_channels": 256
+  },
+  "seed": 42
+}

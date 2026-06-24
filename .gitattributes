@@ -1,0 +1,1 @@
+assets/demo_samples/**/spatialtracker2.npz filter=lfs diff=lfs merge=lfs -text
